@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    ></script>
+    <script defer src="./index.js"></script>
+    <title>CPS</title>
+  </head>
+  <body>
+    <div class="body">
+      <div class="mobile-menu mobile-menu--active">
+        <div class="mobile-menu__content">
+          <div class="mobile-menu__mobile-header mobile-header">
+            <button class="mobile-header__button button">
+              <img
+                class="button__img"
+                src="./images/svgs/cross-burger.svg"
+                alt="Бургер меню"
+              />
+            </button>
+            <div class="mobile-header__logo logo">
+              <a class="logo__link" href="#"
+                ><img class="logo__img" src="./images/svgs/logo.svg" alt="Logo"
+              /></a>
+            </div>
+            <button class="mobile-header__button button">
+              <img
+                src="./images/svgs/search.svg"
+                alt="Поиск"
+                class="button__img"
+              />
+            </button>
+          </div>
+          <div class="mobile-menu__main">
+            <nav class="mobile-menu__navigation navigation">
+              <ul class="navigation__list">
+                <li class="navigation__item navigation__item--active">
+                  <a href="#" class="navigation__link">Ремонт техники</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Услуги и сервисы</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link"
+                    >Корпоративным клиентам</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Продавцам техники</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Партнерам</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Производителям</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Наши сервисные центры</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mobile-menu__footer footer">
+            <ul class="footer__list contacts">
+              <li class="contacts__item">
+                <button class="contacts__button button">
+                  <img
+                    class="button__img"
+                    src="./images/svgs/call.svg"
+                    alt="Звонок"
+                  />
+                </button>
+              </li>
+              <li class="contacts__item">
+                <button class="contacts__button button">
+                  <img
+                    class="button__img"
+                    src="./images/svgs/chat.svg"
+                    alt="Чат"
+                  />
+                </button>
+              </li>
+              <li class="contacts__item">
+                <button class="contacts__button button">
+                  <img
+                    class="button__img"
+                    src="./images/svgs/profile.svg"
+                    alt="Профиль"
+                  />
+                </button>
+              </li>
+            </ul>
+            <div class="footer__email email">
+              <a href="mailto:mail@cps.com" class="footer__link">
+                mail@cps.com
+              </a>
+            </div>
+            <div class="footer__tel tel">
+              <a href="tel:+78008908900" class="footer__link">
+                8 800 890 8900
+              </a>
+            </div>
+
+            <div class="footer__langs langs">
+              <ul class="langs__list">
+                <li class="langs__item">
+                  <input
+                    type="radio"
+                    id="lang__ru"
+                    name="lang"
+                    value="RU"
+                    class="langs__radio"
+                    checked
+                  /><label for="lang__ru" class="langs__label">RU</label>
+                </li>
+                <li class="langs__item">
+                  <input
+                    type="radio"
+                    id="lang__en"
+                    name="lang"
+                    value="EN"
+                    class="langs__radio"
+                  /><label for="lang__en" class="langs__label">EN</label>
+                </li>
+                <li class="langs__item">
+                  <input
+                    type="radio"
+                    id="lang__ch"
+                    name="lang"
+                    value="CH"
+                    class="langs__radio"
+                  /><label for="lang__ch" class="langs__label">CH</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <header class="header">
+          <div class="header__box big-container">
+            <div class="header__up">
+              <div class="container">
+                <div class="header__content">
+                  <button class="header__burger burger">
+                    <img
+                      class="burger__img"
+                      src="./images/svgs/burger.svg"
+                      alt="Бургер меню"
+                    />
+                  </button>
+                  <div class="header__logo logo">
+                    <a class="logo__link" href="#"
+                      ><img
+                        class="logo__img"
+                        src="./images/svgs/logo.svg"
+                        alt="Logo"
+                    /></a>
+                  </div>
+                  <div class="header__menu menu">
+                    <ul class="menu__list contacts">
+                      <li class="contacts__item">
+                        <button class="contacts__button button">
+                          <img
+                            class="button__img"
+                            src="./images/svgs/call.svg"
+                            alt="Звонок"
+                          />
+                        </button>
+                      </li>
+                      <li class="contacts__item">
+                        <button class="contacts__button button">
+                          <img
+                            class="button__img"
+                            src="./images/svgs/chat.svg"
+                            alt="Чат"
+                          />
+                        </button>
+                      </li>
+                      <li class="contacts__item">
+                        <button class="contacts__button button">
+                          <img
+                            class="button__img"
+                            src="./images/svgs/profile.svg"
+                            alt="Профиль"
+                          />
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header__info info">
+                    <ul class="info__list">
+                      <li class="info__item">
+                        <button class="info__button button">
+                          <span class="button__label">Оставить заявку</span>
+                          <img
+                            class="button__img"
+                            src="./images/svgs/repair.svg"
+                            alt="Заявка на ремонт"
+                          />
+                        </button>
+                      </li>
+                      <li class="info__item">
+                        <button class="info__button button">
+                          <span class="button__label">Статус ремонта</span>
+                          <img
+                            class="button__img"
+                            src="./images/svgs/checkstatus.svg"
+                            alt="Статус заявки"
+                          />
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__down">
+              <div class="container">
+                <div class="header__heading">
+                  <h1 class="header__h1">Услуги и сервисы</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <section class="hero">
+            <div class="container">
+              <nav class="hero__nav services">
+                <ul class="services__list">
+                  <li class="services__item service">
+                    <a class="service__link" href="#repair"
+                      >Ремонтируемые бренды</a
+                    >
+                  </li>
+                  <li class="services__item service">
+                    <a class="service__link service__link--active">
+                      Ремонтируемые устройства
+                    </a>
+                  </li>
+                  <li class="services__item service">
+                    <a class="service__link" href="#prices">Цены на услуги</a>
+                  </li>
+                  <li class="services__item service">
+                    <a class="service__link" href="#addresses">
+                      Адреса сервисных центров
+                    </a>
+                  </li>
+                  <li class="services__item service">
+                    <a class="service__link" href="#special-prices"
+                      >Специальные цены</a
+                    >
+                  </li>
+                  <li class="services__item service">
+                    <a class="service__link" href="#feedback">Отзывы</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="hero__information information">
+                <div class="information__content">
+                  <div class="information__description">
+                    <p class="information__p">
+                      Мы являемся авторизованным сервисным центром по ремонту
+                      техники Dell. Только у нас вы можете отремонтировать свой
+                      ноутбук Dell с официальной гарантией производителя.
+                    </p>
+                    <p class="information__p">
+                      Мы успешно работаем с 1992 года и заслужили репутацию
+                      надежного партнера, что подтверждает большое количество
+                      постоянных клиентов. Мы гордимся тем, что к нам обращаются
+                      по рекомендациям и, в свою очередь, советуют нас родным и
+                      близким.
+                    </p>
+                  </div>
+                  <button class="information__button button-read-more">
+                    Читать далее
+                  </button>
+                </div>
+                <div class="information__image image-info">
+                  <picture class="image-info__picture">
+                    <source
+                      media="(min-width: 600px)"
+                      srcset="./images/jpgs/info-1-600w.jpg"
+                    />
+                    <source
+                      media="(min-width: 1000px)"
+                      srcset="./images/jpgs/info-1-1000w.jpg"
+                    />
+                    <img
+                      class="image-info__img"
+                      src="./images/jpgs/info-1-320w.jpg"
+                      alt="Картинка с информацией"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="brands">
+            <div class="brands__title">
+              <div class="container">
+                <h2 class="brands__h2 h2">Ремонт техники различных брендов</h2>
+              </div>
+            </div>
+            <div class="container">
+              <div class="brands__content">
+                <div class="brands__swiper swiper">
+                  <ul class="brands__swiper-wrapper swiper-wrapper">
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-lenovo">
+                          <use xlink:href="./images/svgs/sprite.svg#lenovo" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-samsung">
+                          <use xlink:href="./images/svgs/sprite.svg#samsung" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-apple">
+                          <use xlink:href="./images/svgs/sprite.svg#apple" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-view-sonic">
+                          <use
+                            xlink:href="./images/svgs/sprite.svg#view-sonic"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-bosch">
+                          <use xlink:href="./images/svgs/sprite.svg#bosch" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-hp">
+                          <use xlink:href="./images/svgs/sprite.svg#hp" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-acer">
+                          <use xlink:href="./images/svgs/sprite.svg#acer" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-sony">
+                          <use xlink:href="./images/svgs/sprite.svg#sony" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-lenovo">
+                          <use xlink:href="./images/svgs/sprite.svg#lenovo" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-samsung">
+                          <use xlink:href="./images/svgs/sprite.svg#samsung" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="swiper-slide swiper-wrapper__brand brand">
+                      <a class="brand__content icon" href="#">
+                        <svg class="icon__svg icon__svg-apple">
+                          <use xlink:href="./images/svgs/sprite.svg#apple" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <button class="brands__button button-read-more">
+                  Показать все
+                </button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
