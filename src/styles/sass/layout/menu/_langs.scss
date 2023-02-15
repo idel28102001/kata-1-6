@@ -1,0 +1,40 @@
+@use "../../util" as u;
+
+.langs {
+  $parent: &;
+  &__radio {
+    -webkit-appearance: none;
+    appearance: none;
+    &:checked + #{$parent}__label {
+      color: var(--color-gray-1);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: u.rem(7);
+  }
+
+  &__label {
+    font-size: u.rem(16);
+    line-height: u.rem(24);
+    color: var(--color-black-1);
+    cursor: pointer;
+
+    &:hover {
+      padding-bottom: u.rem(2);
+      color: var(--color-gray-1);
+      border-color: var(--color-gray-1);
+    }
+
+    &:active {
+      padding-bottom: 0;
+      color: var(--color-gray-1);
+      border-color: var(--color-gray-1);
+    }
+  }
+
+  &__button {
+    @extend %underline-decor;
+  }
+}

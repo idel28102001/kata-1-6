@@ -1,0 +1,24 @@
+@use "../../util" as u;
+
+.menu-footer {
+  &__list {
+    margin-bottom: u.rem(16);
+  }
+
+  &__link {
+    @extend %underline-decor;
+    color: var(--color-black-1);
+
+    &:hover {
+      padding-bottom: u.rem(2);
+      color: var(--color-black-1);
+      border-color: var(--color-black-1);
+    }
+
+    &:active {
+      padding-bottom: 0;
+      color: var(--color-black-1);
+      border-color: var(--color-black-1);
+    }
+  }
+}

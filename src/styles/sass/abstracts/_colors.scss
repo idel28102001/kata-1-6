@@ -1,0 +1,19 @@
+:root,
+[data-theme="default"] {
+  --color-white-1: #eaeaea;
+  --color-white-2: #f8f8f8;
+  --color-white-3: #ffffff;
+
+  --color-aquamarine-1: #41f6d7;
+  --color-aquamarine-2: #b8ffec;
+  --color-aquamarine-3: #d9fff5;
+
+  --color-gray-1: #7e7e82;
+
+  --color-black-1: #1b1c21;
+}
+
+[data-theme] {
+  background-color: var(--color-bg);
+  color: var(--color-contrast-high);
+}

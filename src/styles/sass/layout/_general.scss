@@ -1,0 +1,30 @@
+@use "../util" as u;
+
+.big-container {
+  @include u.breakpoint(large) {
+    max-width: u.rem(1120);
+    margin-inline: auto;
+  }
+}
+.container {
+  padding-inline: u.rem(16);
+  margin-inline: auto;
+
+  @include u.breakpoint(xsmall) {
+    padding-inline: u.rem(24);
+  }
+
+  @include u.breakpoint(large) {
+    max-width: u.rem(1120);
+    padding-inline: u.rem(32);
+  }
+}
+
+.body {
+  display: flex;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+}

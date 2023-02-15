@@ -1,0 +1,24 @@
+@use "../../util" as u;
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  gap: u.rem(16);
+
+  &__item {
+    display: flex;
+  }
+}
+
+.email {
+  font-size: u.rem(16);
+  line-height: u.rem(24);
+  margin-bottom: u.rem(12);
+}
+
+.tel {
+  font-size: u.rem(24);
+  font-weight: bold;
+  line-height: u.rem(22);
+  margin-bottom: u.rem(40);
+}

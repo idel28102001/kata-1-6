@@ -1,0 +1,15 @@
+@use "sass:math";
+
+@function rem($pixel) {
+  @if not math.is-unitless($pixel) {
+    @error "Property #{$pixel} has unit in it self using rem() function; only numbers are allowed";
+  }
+  @return math.div($pixel, 16) + rem;
+}
+
+@function em($pixel) {
+  @if not math.is-unitless($pixel) {
+    @error "Property #{$pixel} has unit in it self using em() function; only numbers are allowed";
+  }
+  @return math.div($pixel, 16) + em;
+}

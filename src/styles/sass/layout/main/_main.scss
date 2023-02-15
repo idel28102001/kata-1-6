@@ -1,0 +1,10 @@
+@use "../../util" as u;
+
+.main {
+  margin-bottom: u.rem(30);
+  overflow: hidden;
+
+  @include u.breakpoint(xsmall) {
+    margin-bottom: u.rem(35);
+  }
+}

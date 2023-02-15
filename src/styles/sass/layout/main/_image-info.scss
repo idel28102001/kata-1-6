@@ -1,0 +1,15 @@
+@use "../../util" as u;
+
+.image-info {
+  display: flex;
+
+  &__img {
+    border-radius: u.rem(10);
+    flex-grow: 1;
+  }
+
+  &__picture {
+    display: flex;
+    flex-grow: 1;
+  }
+}

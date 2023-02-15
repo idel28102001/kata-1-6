@@ -1,0 +1,6 @@
+@use "functions" as u;
+
+@mixin heightWidth($height, $width) {
+  height: u.rem($height);
+  width: u.rem($width);
+}

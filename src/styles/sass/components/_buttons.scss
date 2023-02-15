@@ -1,0 +1,95 @@
+@use "../util" as u;
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin hovAct($translate, $scale, $opacity, $button) {
+  > #{$button} {
+    transform: translateX(u.rem($translate));
+  }
+  > img {
+    transform: scale($scale);
+    opacity: $opacity;
+  }
+}
+
+.button {
+  $button: &;
+  display: flex;
+  cursor: pointer;
+
+  &__label {
+    display: none;
+    font-size: u.rem(16);
+    @include u.breakpoint(large) {
+      display: block;
+    }
+  }
+
+  > img {
+    height: u.rem(40);
+    width: u.rem(40);
+  }
+
+  > img,
+  > &__label {
+    transition-property: transform, opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:hover {
+    @include hovAct(-2, 1.05, 0.8, #{$button}__label);
+  }
+
+  &:active {
+    @include hovAct(2, 0.95, 1, #{$button}__label);
+  }
+}
+
+.burger {
+  display: flex;
+}
+
+.button-read-more {
+  display: flex;
+  align-items: center;
+  gap: u.rem(8);
+
+  @include u.breakpoint(xsmall) {
+    padding: u.rem(2) 0 0 u.rem(1);
+  }
+
+  &::before {
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/svgs/expand.svg");
+    height: u.rem(40);
+    width: u.rem(40);
+    transition: transform var(--swiper-expose-duration) ease-in-out;
+  }
+
+  &__label {
+    margin-left: u.rem(8);
+  }
+}
+
+.menu-button {
+  @include u.breakpoint(xsmall) {
+    display: flex;
+  }
+}
+
+.button-info__label {
+  &__label {
+    @include u.breakpoint(large) {
+      display: unset;
+      font-weight: medium;
+      margin-right: u.rem(8);
+    }
+  }
+}

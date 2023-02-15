@@ -46,6 +46,7 @@ module.exports = {
         extensions: ['.js', '.json', '.css', '.scss'],
         alias: {
             "@": path.resolve(__dirname, 'src'),
+            "@style": path.resolve(__dirname, 'src/styles/sass'),
         },
     },
     optimization: optimization(),

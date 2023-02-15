@@ -1,0 +1,14 @@
+@use "../../util" as u;
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  gap: u.rem(16.7);
+  margin-bottom: u.rem(16);
+  &__button {
+    &:last-child {
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+  }
+}

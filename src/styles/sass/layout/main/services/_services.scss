@@ -1,0 +1,25 @@
+@use "../../../util" as u;
+
+.services__list {
+  position: relative;
+  display: flex;
+  overflow-x: scroll;
+  margin-right: u.rem(-16);
+  min-width: 100%;
+  align-items: center;
+}
+
+.services__list::-webkit-scrollbar {
+  display: none;
+}
+
+.services__item {
+  margin: u.rem(5);
+}
+
+@include u.breakpoint(large) {
+  .services__list {
+    flex-wrap: wrap;
+    overflow-x: unset;
+  }
+}

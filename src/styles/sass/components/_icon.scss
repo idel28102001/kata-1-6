@@ -1,0 +1,37 @@
+@use "../util" as u;
+
+.icon {
+  &__svg {
+    &-lenovo {
+      @include u.heightWidth(32, 108);
+    }
+
+    &-samsung {
+      @include u.heightWidth(39, 116);
+    }
+
+    &-apple {
+      @include u.heightWidth(44, 44);
+    }
+
+    &-view-sonic {
+      @include u.heightWidth(21, 128);
+    }
+
+    &-bosch {
+      @include u.heightWidth(30, 128);
+    }
+
+    &-hp {
+      @include u.heightWidth(52, 52);
+    }
+
+    &-acer {
+      @include u.heightWidth(24, 94);
+    }
+
+    &-sony {
+      @include u.heightWidth(26, 108);
+    }
+  }
+}

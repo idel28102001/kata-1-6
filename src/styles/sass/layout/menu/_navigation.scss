@@ -1,0 +1,61 @@
+@use "../../util" as u;
+
+.navigation {
+  $parent: &;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(32);
+    flex-grow: 1;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    &::before {
+      position: absolute;
+      width: u.rem(8);
+      height: 100%;
+      top: 0;
+      left: u.rem(-24);
+      transform: translateX(-50%);
+      border-radius: u.rem(4);
+      background-color: var(--color-aquamarine-1);
+    }
+
+    &:hover {
+      #{$parent}__link {
+        color: var(--color-gray-1);
+        transform: translateX(u.rem(10));
+      }
+      &:before {
+        content: "";
+      }
+    }
+
+    &:active {
+      #{$parent}__link {
+        transform: unset;
+      }
+    }
+
+    &--active {
+      #{$parent}__link {
+        color: var(--color-gray-1);
+      }
+      &::before {
+        content: "";
+      }
+    }
+  }
+
+  &__link {
+    line-height: u.rem(32);
+    text-decoration: none;
+    font-size: u.rem(16);
+    color: var(--color-black-1);
+    transition-property: color, transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+  }
+}

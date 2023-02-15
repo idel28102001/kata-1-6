@@ -1,0 +1,20 @@
+@use "../../../util" as u;
+
+.service {
+  &__link {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: u.rem(9) u.rem(15);
+    font-size: u.rem(16);
+    white-space: nowrap;
+    border-radius: u.rem(4);
+    transition: border-color 0.1s ease-in-out;
+    border: u.rem(2) solid transparent;
+
+    &--active,
+    &:hover {
+      border-color: var(--color-aquamarine-2);
+    }
+  }
+}

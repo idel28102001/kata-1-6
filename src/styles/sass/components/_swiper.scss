@@ -1,0 +1,97 @@
+@use "../util" as u;
+
+.swiper {
+  $parent: &;
+  &-pagination {
+    position: static;
+
+    @include u.breakpoint(small) {
+      display: none;
+    }
+
+    &-bullet {
+      opacity: unset;
+    }
+
+    > &-bullet {
+      height: u.rem(12);
+      width: u.rem(12);
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+
+    @include u.breakpoint(small) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: u.rem(12) u.rem(20);
+      transition: max-height 0.52s ease-in-out;
+      max-height: u.rem(156);
+      overflow-y: hidden;
+    }
+
+    @include u.breakpoint(medium) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: u.rem(16) u.rem(24);
+      max-height: u.rem(160);
+    }
+
+    @include u.breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: u.rem(32);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: u.rem(24);
+      height: 100%;
+      right: u.rem(-16);
+      top: 0;
+      background: linear-gradient(
+        270deg,
+        var(--color-white-2) 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+      );
+
+      @include u.breakpoint(small) {
+        content: unset;
+        transition: height 0.2s ease-in-out;
+      }
+    }
+
+    > .brand:nth-child(n + 7) {
+      @include u.breakpoint(small) {
+        height: 0;
+      }
+    }
+  }
+
+  &--exposed {
+    > #{$parent}-wrapper {
+      @include u.breakpoint(small) {
+        max-height: u.rem(1200);
+      }
+
+      @include u.breakpoint(medium) {
+        max-height: u.rem(1200);
+      }
+
+      @include u.breakpoint(large) {
+        max-height: u.rem(1200);
+      }
+
+      > .brand:nth-child(n + 7) {
+        @include u.breakpoint(small) {
+          height: u.rem(72);
+        }
+      }
+    }
+    + .button-read-more::before {
+      @include u.breakpoint(small) {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

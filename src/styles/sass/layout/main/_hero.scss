@@ -1,0 +1,32 @@
+@use "../../util" as u;
+
+.hero {
+  &__nav {
+    margin-bottom: u.rem(18);
+    position: relative;
+    margin-right: u.rem(-16);
+
+    @include u.breakpoint(xsmall) {
+      margin-bottom: u.rem(27);
+      margin-right: u.rem(-32);
+    }
+
+    @include u.breakpoint(large) {
+      margin-bottom: u.rem(4);
+    }
+
+    ::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: u.rem(100);
+      background-image: linear-gradient(to right, transparent 50%, white);
+      right: 0;
+      top: 0;
+
+      @include u.breakpoint(large) {
+        content: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@use "../../util" as u;
+
+.information {
+  @include u.breakpoint(xsmall) {
+    display: flex;
+    gap: u.rem(48);
+  }
+
+  @include u.breakpoint(large) {
+    gap: u.rem(41);
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: u.rem(106);
+    font-size: u.rem(16);
+    line-height: u.rem(19.2);
+    letter-spacing: 0;
+    gap: u.rem(20);
+  }
+
+  &__image {
+    margin-inline: u.rem(-16);
+
+    @include u.breakpoint(xsmall) {
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    @include u.breakpoint(large) {
+      margin-top: u.rem(-8);
+    }
+  }
+
+  &__content {
+    margin-bottom: u.rem(16);
+    flex-grow: 1;
+
+    @include u.breakpoint(xsmall) {
+      flex-basis: u.rem(312);
+    }
+
+    @include u.breakpoint(large) {
+      flex-grow: unset;
+      flex-basis: u.rem(490);
+    }
+  }
+
+  &__p {
+    @include u.breakpoint(xsmall) {
+      padding-top: u.rem(2);
+      line-height: u.rem(22);
+      font-size: u.rem(14);
+    }
+  }
+
+  &___description {
+    @include u.breakpoint(xsmall) {
+      gap: u.rem(39);
+      max-height: u.rem(168);
+    }
+
+    @include u.breakpoint(large) {
+      max-height: u.rem(160);
+      margin-bottom: u.rem(12);
+    }
+  }
+}

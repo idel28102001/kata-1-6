@@ -1,0 +1,20 @@
+@use "../util" as u;
+
+.logo {
+  display: flex;
+  &__link {
+    display: flex;
+    transition: opacity 0.15s ease-in-out;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: unset;
+    }
+
+    > img {
+      width: u.rem(97);
+      height: u.rem(51);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "../../util" as u;
+
+.info {
+  &__list {
+    display: flex;
+    justify-content: right;
+    gap: u.rem(16);
+
+    @include u.breakpoint(large) {
+      gap: u.rem(32);
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__button {
+    @include u.breakpoint(large) {
+      display: flex;
+      align-items: center;
+      gap: u.rem(8);
+    }
+  }
+}
