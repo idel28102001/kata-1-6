@@ -20,8 +20,7 @@
   }
 
   &-wrapper {
-    position: relative;
-
+    position: static;
     @include u.breakpoint(small) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -40,25 +39,6 @@
     @include u.breakpoint(large) {
       grid-template-columns: repeat(4, 1fr);
       column-gap: u.rem(32);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: u.rem(24);
-      height: 100%;
-      right: u.rem(-16);
-      top: 0;
-      background: linear-gradient(
-        270deg,
-        var(--color-white-2) 16.84%,
-        rgba(248, 248, 248, 0.0001) 100%
-      );
-
-      @include u.breakpoint(small) {
-        content: unset;
-        transition: height 0.2s ease-in-out;
-      }
     }
 
     > .brand:nth-child(n + 7) {

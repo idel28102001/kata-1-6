@@ -35,7 +35,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: './index.js',
+        main: './js/index.js',
     },
     output: {
         filename: filename('js'),
@@ -52,9 +52,12 @@ module.exports = {
     optimization: optimization(),
     plugins: [
         new HTMLWebpackPlugin({
+            title: 'Webpack 4 Starter',
             template: './index.html',
+            inject: true,
             minify: {
-                collapseInlineTagWhitespace: isProd,
+                removeComments: true,
+                collapseWhitespace: false,
             }
         }),
         new CleanWebpackPlugin(),
