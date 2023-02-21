@@ -1,0 +1,15 @@
+@use "../../../../util" as u;
+
+@mixin grid {
+  @include u.breakpoint(small) {
+    display: grid;
+    grid-template-columns: 33% 20% 20% min(27%, u.rem(119));
+  }
+  @include u.breakpoint(xsmall) {
+    grid-template-columns: 36% 20% 20% min(24%, u.rem(119));
+  }
+
+  @include u.breakpoint(medium) {
+    grid-template-columns: 54% 14% 15% min(17%, u.rem(119));
+  }
+}

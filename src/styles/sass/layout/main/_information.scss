@@ -14,11 +14,29 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    max-height: u.rem(106);
-    font-size: u.rem(16);
-    line-height: u.rem(19.2);
+    max-height: u.rem(98);
+    font-size: u.rem(15);
+    line-height: u.rem(18);
     letter-spacing: 0;
     gap: u.rem(20);
+    transition: max-height 0.5s ease-in;
+
+    @include u.breakpoint(small) {
+      max-height: u.rem(162);
+    }
+
+    &--exposed {
+      max-height: u.rem(999);
+
+      & + .button-read-more::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__button {
+    transform: translateX(u.rem(-8));
+    gap: 0;
   }
 
   &__image {
@@ -35,7 +53,7 @@
   }
 
   &__content {
-    margin-bottom: u.rem(16);
+    margin-bottom: u.rem(8);
     flex-grow: 1;
 
     @include u.breakpoint(xsmall) {
@@ -51,7 +69,7 @@
   &__p {
     @include u.breakpoint(xsmall) {
       padding-top: u.rem(2);
-      line-height: u.rem(22);
+      line-height: u.rem(20);
       font-size: u.rem(14);
     }
   }

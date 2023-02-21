@@ -1,15 +1,10 @@
 @use "../../../util" as u;
 
 .brands {
-  border-top: u.rem(1) solid var(--color-aquamarine-3);
+  margin-bottom: u.rem(19);
 
-  &__title {
-    padding: u.rem(16) 0;
-    background: linear-gradient(
-      210deg,
-      var(--color-white-3) 0%,
-      var(--color-white-2) 98.61%
-    );
+  @include u.breakpoint(small) {
+    margin-bottom: u.rem(24);
   }
 
   &__swiper {
@@ -22,37 +17,22 @@
       padding: 0;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: u.rem(24);
-      height: 100%;
-      right: 0;
-      top: 0;
-      background: linear-gradient(
-        270deg,
-        var(--color-white-2) 16.84%,
-        rgba(248, 248, 248, 0.0001) 100%
-      );
-
-      @include u.breakpoint(small) {
-        content: unset;
-        transition: height 0.2s ease-in-out;
-      }
-    }
-
     &-wrapper {
       margin-bottom: u.rem(14);
     }
   }
 
+  &__section-title {
+    margin-bottom: u.rem(14);
+
+    @include u.breakpoint(small) {
+      margin-bottom: u.rem(23);
+    }
+  }
+
   &__content {
     margin-inline: u.rem(-16);
-    padding-inline: u.rem(38) u.rem(16);
-
-    @include u.breakpoint(xsmall) {
-      padding-top: u.rem(24);
-    }
+    padding-inline: u.rem(16);
   }
 
   &__button {

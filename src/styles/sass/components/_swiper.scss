@@ -2,6 +2,24 @@
 
 .swiper {
   $parent: &;
+  &::after {
+    content: "";
+    position: absolute;
+    width: u.rem(24);
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: linear-gradient(
+      270deg,
+      var(--color-white-2) 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+
+    @include u.breakpoint(small) {
+      content: unset;
+      transition: height 0.2s ease-in-out;
+    }
+  }
   &-pagination {
     position: static;
 
@@ -40,16 +58,14 @@
       grid-template-columns: repeat(4, 1fr);
       column-gap: u.rem(32);
     }
-
-    > .brand:nth-child(n + 7) {
-      @include u.breakpoint(small) {
-        height: 0;
-      }
-    }
   }
 
   &--exposed {
     > #{$parent}-wrapper {
+      > li {
+        opacity: 1;
+      }
+
       @include u.breakpoint(small) {
         max-height: u.rem(1200);
       }
@@ -60,12 +76,6 @@
 
       @include u.breakpoint(large) {
         max-height: u.rem(1200);
-      }
-
-      > .brand:nth-child(n + 7) {
-        @include u.breakpoint(small) {
-          height: u.rem(72);
-        }
       }
     }
     + .button-read-more::before {

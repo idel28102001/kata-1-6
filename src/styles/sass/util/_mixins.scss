@@ -1,6 +1,16 @@
 @use "functions" as u;
+@use "breakpoints" as b;
 
 @mixin heightWidth($height, $width) {
   height: u.rem($height);
   width: u.rem($width);
+}
+
+@mixin tableHeading($title) {
+  content: $title;
+  display: block;
+  color: var(--color-gray-1);
+  font-size: u.rem(14);
+  font-weight: 500;
+  margin-bottom: u.rem(6);
 }

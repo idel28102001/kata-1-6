@@ -1,0 +1,17 @@
+@use "../../../../util" as u;
+@use "mixins" as m;
+.thr {
+  @include m.grid;
+  opacity: 0;
+  position: absolute;
+
+  &__thd {
+    font-size: u.rem(14);
+    color: var(--color-gray-1);
+  }
+
+  @include u.breakpoint(small) {
+    opacity: 1;
+    position: static;
+  }
+}

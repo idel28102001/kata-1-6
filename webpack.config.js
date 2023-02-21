@@ -35,7 +35,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: './js/index.js',
+        main: './index.ts',
     },
     output: {
         filename: filename('js'),
@@ -43,7 +43,7 @@ module.exports = {
         assetModuleFilename: 'images/[name][ext][query]'
     },
     resolve: {
-        extensions: ['.js', '.json', '.css', '.scss'],
+        extensions: ['.tsx', '.ts', '.js', '.json', '.css', '.scss'],
         alias: {
             "@": path.resolve(__dirname, 'src'),
             "@style": path.resolve(__dirname, 'src/styles/sass'),
@@ -88,6 +88,19 @@ module.exports = {
                     options: {
                         presets: [
                             '@babel/preset-env',
+                        ],
+                    },
+                },
+            },
+            {
+                test: /\.tsx?$/,
+                exclude: '/node_modules/',
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env',
+                            "@babel/preset-typescript",
                         ],
                     },
                 },

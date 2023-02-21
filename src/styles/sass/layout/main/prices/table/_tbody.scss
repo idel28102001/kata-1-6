@@ -1,0 +1,23 @@
+@use "../../../../util" as u;
+
+.tbody {
+  max-height: unset;
+
+  @include u.breakpoint(small) {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-inline: u.rem(16);
+    gap: 0;
+    background-color: var(--color-white-3);
+    border-radius: u.rem(1);
+    & > .ceil {
+      background-color: unset;
+      border: none;
+      border-radius: 0;
+      &:not(:last-child) {
+        border-bottom: u.rem(1) solid var(--color-gray-2);
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@use "../../../util" as u;
+
+.prices {
+  &__table {
+    margin-bottom: u.rem(13);
+    @include u.breakpoint(small) {
+      margin-bottom: u.rem(10);
+    }
+  }
+
+  &__section-title {
+    margin-bottom: u.rem(15);
+    @include u.breakpoint(small) {
+      margin-bottom: u.rem(32);
+    }
+  }
+
+  &__desciption {
+    font-size: u.rem(15);
+    line-height: u.rem(20);
+    color: var(--color-black-1);
+    margin-bottom: u.rem(16);
+    @include u.breakpoint(small) {
+      font-size: u.rem(14);
+      width: 57%;
+    }
+  }
+
+  &__info {
+    position: relative;
+    color: var(--color-black-1);
+    font-size: u.rem(16);
+    line-height: u.rem(24);
+    font-weight: bold;
+    @include u.breakpoint(small) {
+      font-size: u.rem(15);
+    }
+
+    &::after {
+      transition: transform 0.1s ease-in-out;
+      content: "";
+      position: absolute;
+      background-image: url("../images/svgs/more.svg");
+      height: u.rem(24);
+      width: u.rem(27.49);
+    }
+    &:hover:after {
+      transform: translateX(u.rem(4));
+    }
+    &:active:after {
+      transform: translateX(u.rem(-2));
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "../../../../util" as u;
+@use "mixins" as m;
+
+.tr {
+  padding: u.rem(16);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "service service"
+    "price price"
+    "time button";
+  gap: u.rem(17);
+  align-items: center;
+
+  @include m.grid;
+  @include u.breakpoint(small) {
+    grid-template-areas: "service price time button";
+    padding: 0;
+    gap: 0;
+    padding-block: u.rem(16);
+  }
+}

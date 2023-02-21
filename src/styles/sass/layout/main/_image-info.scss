@@ -4,12 +4,18 @@
   display: flex;
 
   &__img {
-    border-radius: u.rem(10);
     flex-grow: 1;
+    @include u.breakpoint(xsmall) {
+      border-radius: u.rem(10);
+    }
   }
 
   &__picture {
     display: flex;
     flex-grow: 1;
+
+    @include u.breakpoint(small) {
+      max-height: u.rem(212);
+    }
   }
 }

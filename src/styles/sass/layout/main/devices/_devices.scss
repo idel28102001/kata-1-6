@@ -1,0 +1,24 @@
+@use "../../../util" as u;
+
+.devices {
+  margin-bottom: u.rem(19);
+  @include u.breakpoint(small) {
+    margin-bottom: u.rem(26);
+  }
+
+  &__swiper {
+    margin-inline: u.rem(-16);
+    padding-inline: u.rem(16);
+  }
+
+  &__swiper-wrapper {
+    margin-bottom: u.rem(12);
+  }
+
+  &__section-title {
+    margin-bottom: u.rem(15);
+    @include u.breakpoint(small) {
+      margin-bottom: u.rem(23);
+    }
+  }
+}

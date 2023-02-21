@@ -1,0 +1,24 @@
+@use "../../../util" as u;
+
+.device {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: u.rem(18) u.rem(16) u.rem(17) u.rem(15);
+    height: u.rem(160);
+
+    @include u.breakpoint(small) {
+      height: u.rem(158);
+    }
+  }
+  &__title {
+    color: var(--color-black-1);
+    font-weight: 500;
+    font-size: u.rem(16);
+    align-self: flex-start;
+  }
+
+  &__arrow-button {
+    align-self: flex-end;
+  }
+}

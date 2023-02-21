@@ -1,7 +1,7 @@
 @use "../../util" as u;
 
 .header {
-  margin-bottom: u.rem(19);
+  margin-bottom: u.rem(18);
   @include u.breakpoint(xsmall) {
     margin-bottom: u.rem(26);
   }
@@ -12,8 +12,12 @@
 
   &__up {
     box-shadow: 0 u.rem(-12) u.rem(20) 0 var(--color-aquamarine-1);
-    padding: u.rem(18) 0;
+    padding: u.rem(17.5) 0;
     margin-bottom: u.rem(25);
+    // @include u.breakpoint(small) {
+    //   padding: u.rem(15.5) 0;
+    // }
+
     @include u.breakpoint(large) {
       box-shadow: unset;
       padding: 0;
@@ -31,30 +35,31 @@
   }
 
   &__logo {
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: u.rem(16);
     margin-left: u.rem(16);
 
     @include u.breakpoint(xsmall) {
-      margin-left: u.rem(20);
+      flex-direction: row-reverse;
+      margin-left: 0;
     }
+
     @include u.breakpoint(large) {
       display: none;
     }
 
     &::after {
-      position: absolute;
-      right: u.rem(-18);
-      top: 50%;
-      transform: translateY(-50%);
+      display: inline-block;
       content: "";
       height: u.rem(31);
       border-radius: u.rem(1);
       width: u.rem(2);
       background-color: var(--color-white-1);
     }
-    @include u.breakpoint(xsmall) {
-      right: unset;
-      left: u.rem(-22);
+
+    > a {
+      line-height: 0;
     }
   }
 
@@ -73,7 +78,7 @@
 
   &__h1 {
     font-weight: bold;
-    font-size: u.rem(24);
+    font-size: u.rem(27);
     color: var(--color-black-1);
   }
 
@@ -96,7 +101,7 @@
 
   &__burger {
     @include u.breakpoint(xsmall) {
-      margin-right: u.rem(22);
+      margin-right: u.rem(24);
     }
     @include u.breakpoint(large) {
       display: none;

@@ -1,0 +1,42 @@
+@use "../../util" as u;
+
+.footer {
+  border-top: u.rem(1) solid var(--color-aquamarine-3);
+  padding-top: u.rem(17);
+  @include u.breakpoint(small) {
+    padding-block: u.rem(32) u.rem(24);
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(16);
+    font-size: u.rem(14);
+    align-items: center;
+    text-align: center;
+    color: var(--color-gray-1);
+
+    @include u.breakpoint(small) {
+      align-items: flex-start;
+      flex-direction: row;
+      & > * {
+        flex-basis: 33%;
+      }
+    }
+  }
+
+  &__info {
+    @include u.breakpoint(small) {
+      text-align: left;
+    }
+  }
+  &__temrs {
+    @include u.breakpoint(small) {
+      text-align: center;
+    }
+  }
+  &__public {
+    @include u.breakpoint(small) {
+      text-align: right;
+    }
+  }
+}

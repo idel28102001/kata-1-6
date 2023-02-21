@@ -1,0 +1,52 @@
+@use "../../../../util" as u;
+
+$prices-table: (
+  "service": "Ремонтные услуги",
+  "price": "Цена",
+  "time": "Срок",
+);
+
+.td {
+  display: flex;
+  flex-direction: column;
+  font-size: u.rem(14);
+  color: var(--color-black-1);
+  font-weight: 500;
+  @each $class, $title in $prices-table {
+    &--#{$class} {
+      grid-area: #{$class};
+      &::before {
+        @include u.tableHeading($title);
+        @include u.breakpoint(small) {
+          content: none;
+        }
+      }
+    }
+  }
+  &--button {
+    display: flex;
+    flex-direction: row;
+    grid-area: button;
+    align-self: flex-end;
+    background-color: var(--color-pink-1);
+    padding: u.rem(4) u.rem(12);
+    border-radius: u.rem(16);
+    &::after {
+      display: block;
+      content: "";
+      height: u.rem(24);
+      width: u.rem(24);
+      background-image: url("../images/svgs/goside.svg");
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: u.rem(12);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-white-3);
+  }
+}

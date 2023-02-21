@@ -1,0 +1,21 @@
+@use "../../../../util" as u;
+
+.table {
+  &__swiper {
+    margin-inline: u.rem(-16);
+    padding-inline: u.rem(16);
+  }
+
+  &__thead {
+    padding-inline: u.rem(16);
+    margin-bottom: u.rem(16);
+
+    @include u.breakpoint(small) {
+      margin-bottom: u.rem(14);
+    }
+  }
+
+  &__tbody {
+    margin-bottom: u.rem(15);
+  }
+}

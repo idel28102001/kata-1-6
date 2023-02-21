@@ -1,0 +1,10 @@
+@use "../util" as u;
+.ceil {
+  border: u.rem(1) solid var(--color-white-1);
+  background-color: var(--color-white-3);
+  border-radius: u.rem(6);
+
+  @include u.breakpoint(small) {
+    width: unset;
+  }
+}

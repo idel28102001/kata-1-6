@@ -1,6 +1,8 @@
 @use "../../../util" as u;
 
 .brand {
+  padding-inline: u.rem(16);
+
   @include u.breakpoint(small) {
     transition: height var(--swiper-expose-duration) ease-in-out;
   }
@@ -9,25 +11,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: u.rem(1) solid var(--color-white-1);
-    background-color: var(--color-white-3);
-    border-radius: u.rem(6);
-    padding-inline: u.rem(16);
     height: u.rem(72);
-
-    &::after {
-      transition: transform 0.1s ease-in-out;
-      content: url("../images/svgs/round-arrow.svg");
-      width: u.rem(40);
-      height: u.rem(40);
-    }
-
-    &:hover:after {
-      transform: translateX(-20%);
-    }
-
-    &:active:after {
-      transform: unset;
+    @include u.breakpoint(small) {
+      height: u.rem(70);
     }
   }
 }

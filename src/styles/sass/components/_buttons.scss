@@ -93,3 +93,20 @@ button {
     }
   }
 }
+
+.arrow-button {
+  & {
+    transition: transform 0.1s ease-in-out;
+    content: url("../images/svgs/round-arrow.svg");
+    width: u.rem(40);
+    height: u.rem(40);
+  }
+
+  &:hover {
+    transform: translateX(-20%);
+  }
+
+  &:active {
+    transform: unset;
+  }
+}
