@@ -21,6 +21,7 @@ $modals2: feedback, call, mobile-menu;
   }
 
   &__modal {
+    z-index: 3;
     position: fixed;
     right: 0;
     top: 0;
@@ -40,16 +41,11 @@ $modals2: feedback, call, mobile-menu;
       }
       @if #{$modal}==mobile-menu {
         > #{$parent}__modal--#{$modal} {
-          z-index: 3;
           transform: unset;
           left: 0;
           right: unset;
           box-shadow: u.rem(-2) u.rem(0) u.rem(4) rgba(69, 79, 126, 0.02),
             u.rem(16) u.rem(0) u.rem(52) rgba(14, 24, 80, 0.2);
-          @include u.breakpoint(large) {
-            box-shadow: unset;
-            z-index: 1;
-          }
         }
       }
     }
@@ -63,6 +59,8 @@ $modals2: feedback, call, mobile-menu;
           width: u.rem(309);
           position: relative;
           transform: unset;
+          box-shadow: unset;
+          z-index: 1;
         }
       }
     }
