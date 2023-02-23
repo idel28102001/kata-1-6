@@ -1,0 +1,20 @@
+[
+    {
+        "modal": ".modals__modal--feedback",
+        "active": "modals--feedback",
+        "button": ".button--chat",
+        "cross": ".modal__cross"
+    },
+    {
+        "modal": ".modals__modal--call",
+        "active": "modals--call",
+        "button": ".button--call",
+        "cross": ".modal__cross"
+    },
+    {
+        "modal": ".modals__modal--mobile-menu",
+        "active": "modals--mobile-menu",
+        "button": ".header__burger",
+        "cross": ".menu-header__button"
+    }
+]
