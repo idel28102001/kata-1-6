@@ -30,7 +30,7 @@
       background-color: var(--color-aquamarine-1);
 
       @include u.breakpoint(xsmall) {
-        left: u.rem(-24);
+        left: u.rem(-21);
       }
     }
 
