@@ -22,4 +22,18 @@
   @include u.breakpoint(large) {
     padding-block: u.rem(17) u.rem(15.5);
   }
+
+  &__button-link {
+    padding-inline: u.rem(16);
+    gap: u.rem(8);
+
+    @include u.breakpoint(large) {
+      gap: u.rem(10);
+      padding-inline: u.rem(10);
+    }
+    @include u.breakpoint(xlarge) {
+      gap: u.rem(8);
+      padding-inline: u.rem(16);
+    }
+  }
 }
