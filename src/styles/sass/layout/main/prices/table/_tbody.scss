@@ -20,4 +20,11 @@
       }
     }
   }
+
+  @include u.breakpoint(large) {
+    padding-inline: u.rem(22) u.rem(14);
+  }
+  > .ceil {
+    cursor: unset;
+  }
 }

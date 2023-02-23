@@ -1,7 +1,6 @@
 @use "../../util" as u;
 
 .footer {
-  border-top: u.rem(1) solid var(--color-aquamarine-3);
   padding-top: u.rem(17);
   @include u.breakpoint(small) {
     padding-block: u.rem(32) u.rem(24);
@@ -31,7 +30,11 @@
   }
   &__temrs {
     @include u.breakpoint(small) {
+      color: var(--color-gray-1);
       text-align: center;
+    }
+    @include u.breakpoint(large) {
+      text-align: left;
     }
   }
   &__public {

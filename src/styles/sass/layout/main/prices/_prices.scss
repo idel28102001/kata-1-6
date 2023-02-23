@@ -6,6 +6,10 @@
     @include u.breakpoint(small) {
       margin-bottom: u.rem(10);
     }
+
+    @include u.breakpoint(large) {
+      margin-bottom: u.rem(18);
+    }
   }
 
   &__section-title {
@@ -23,6 +27,10 @@
     @include u.breakpoint(small) {
       font-size: u.rem(14);
       width: 57%;
+    }
+    @include u.breakpoint(small) {
+      width: 40%;
+      margin-bottom: u.rem(15);
     }
   }
 

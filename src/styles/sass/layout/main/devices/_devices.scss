@@ -6,6 +6,10 @@
     margin-bottom: u.rem(26);
   }
 
+  @include u.breakpoint(large) {
+    margin-bottom: u.rem(45);
+  }
+
   &__swiper {
     margin-inline: u.rem(-16);
     padding-inline: u.rem(16);

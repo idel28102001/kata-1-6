@@ -3,8 +3,21 @@
   border: u.rem(1) solid var(--color-white-1);
   background-color: var(--color-white-3);
   border-radius: u.rem(6);
+  cursor: pointer;
 
   @include u.breakpoint(small) {
     width: unset;
+  }
+
+  &:hover {
+    .arrow-button {
+      transform: translateX(-20%);
+    }
+  }
+
+  &:active {
+    .arrow-button {
+      transform: unset;
+    }
   }
 }

@@ -1,0 +1,22 @@
+@use "../../../util" as u;
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__inputs {
+    margin-bottom: u.rem(16);
+  }
+
+  &__form-info {
+    margin-bottom: u.rem(19);
+    @include u.breakpoint(large) {
+      margin-bottom: u.rem(23);
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: end;
+  }
+}

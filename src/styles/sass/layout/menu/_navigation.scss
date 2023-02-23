@@ -5,8 +5,15 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: u.rem(32);
+    gap: u.rem(16);
     flex-grow: 1;
+
+    @include u.breakpoint(xsmall) {
+      gap: u.rem(24);
+    }
+    @include u.breakpoint(large) {
+      gap: u.rem(18);
+    }
   }
 
   &__item {
@@ -17,10 +24,14 @@
       width: u.rem(8);
       height: 100%;
       top: 0;
-      left: u.rem(-24);
+      left: u.rem(-16);
       transform: translateX(-50%);
       border-radius: u.rem(4);
       background-color: var(--color-aquamarine-1);
+
+      @include u.breakpoint(xsmall) {
+        left: u.rem(-24);
+      }
     }
 
     &:hover {

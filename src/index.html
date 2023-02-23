@@ -8,140 +8,234 @@
   </head>
   <body>
     <div class="body">
-      <div class="mobile-menu">
-        <div class="mobile-menu__content">
-          <div class="mobile-menu__menu-header menu-header">
-            <button class="menu-header__button button">
-              <img
-                class="button__img"
-                src="./images/svgs/cross-burger.svg"
-                alt="Бургер меню"
-              />
-            </button>
-            <div class="menu-header__logo logo">
-              <a class="logo__link" href="#"
-                ><img class="logo__img" src="./images/svgs/logo.svg" alt="Logo"
-              /></a>
+      <div class="modals modals--call">
+        <div class="modals__back"></div>
+        <div class="modals__mobile-menu mobile-menu">
+          <div class="mobile-menu__content">
+            <div class="mobile-menu__menu-header menu-header">
+              <button class="menu-header__button button">
+                <img
+                  class="button__img"
+                  src="./images/svgs/cross-burger.svg"
+                  alt="Бургер меню"
+                />
+              </button>
+              <div class="menu-header__logo logo">
+                <a class="logo__link" href="#"
+                  ><img
+                    class="logo__img"
+                    src="./images/svgs/logo.svg"
+                    alt="Logo"
+                /></a>
+              </div>
+              <button class="menu-header__button button">
+                <img
+                  src="./images/svgs/search.svg"
+                  alt="Поиск"
+                  class="button__img"
+                />
+              </button>
             </div>
-            <button class="menu-header__button button">
-              <img
-                src="./images/svgs/search.svg"
-                alt="Поиск"
-                class="button__img"
-              />
-            </button>
-          </div>
-          <div class="mobile-menu__main">
-            <nav class="mobile-menu__navigation navigation">
-              <ul class="navigation__list">
-                <li class="navigation__item navigation__item--active">
-                  <a href="#" class="navigation__link">Ремонт техники</a>
+            <div class="mobile-menu__main">
+              <nav class="mobile-menu__navigation navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link">Ремонт техники</a>
+                  </li>
+                  <li class="navigation__item navigation__item--active">
+                    <a href="#" class="navigation__link">Услуги и сервисы</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link"
+                      >Корпоративным клиентам</a
+                    >
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link">Продавцам техники</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link">Партнерам</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link">Производителям</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link"
+                      >Наши сервисные центры</a
+                    >
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="mobile-menu__menu-footer menu-footer">
+              <ul class="menu-footer__list contacts">
+                <li class="contacts__item">
+                  <button class="contacts__button button button--call">
+                    <img
+                      class="button__img"
+                      src="./images/svgs/call.svg"
+                      alt="Звонок"
+                    />
+                  </button>
                 </li>
-                <li class="navigation__item">
-                  <a href="#" class="navigation__link">Услуги и сервисы</a>
+                <li class="contacts__item">
+                  <button class="contacts__button button button--chat">
+                    <img
+                      class="button__img"
+                      src="./images/svgs/chat.svg"
+                      alt="Чат"
+                    />
+                  </button>
                 </li>
-                <li class="navigation__item">
-                  <a href="#" class="navigation__link"
-                    >Корпоративным клиентам</a
-                  >
-                </li>
-                <li class="navigation__item">
-                  <a href="#" class="navigation__link">Продавцам техники</a>
-                </li>
-                <li class="navigation__item">
-                  <a href="#" class="navigation__link">Партнерам</a>
-                </li>
-                <li class="navigation__item">
-                  <a href="#" class="navigation__link">Производителям</a>
-                </li>
-                <li class="navigation__item">
-                  <a href="#" class="navigation__link">Наши сервисные центры</a>
-                </li>
-                <li class="navigation__item">
-                  <a href="#" class="navigation__link">Контакты</a>
+                <li class="contacts__item">
+                  <button class="contacts__button button button--profile">
+                    <img
+                      class="button__img"
+                      src="./images/svgs/profile.svg"
+                      alt="Профиль"
+                    />
+                  </button>
                 </li>
               </ul>
-            </nav>
-          </div>
-          <div class="mobile-menu__menu-footer menu-footer">
-            <ul class="menu-footer__list contacts">
-              <li class="contacts__item">
-                <button class="contacts__button button">
-                  <img
-                    class="button__img"
-                    src="./images/svgs/call.svg"
-                    alt="Звонок"
-                  />
-                </button>
-              </li>
-              <li class="contacts__item">
-                <button class="contacts__button button">
-                  <img
-                    class="button__img"
-                    src="./images/svgs/chat.svg"
-                    alt="Чат"
-                  />
-                </button>
-              </li>
-              <li class="contacts__item">
-                <button class="contacts__button button">
-                  <img
-                    class="button__img"
-                    src="./images/svgs/profile.svg"
-                    alt="Профиль"
-                  />
-                </button>
-              </li>
-            </ul>
-            <div class="menu-footer__email email">
-              <a href="mailto:mail@cps.com" class="menu-footer__link">
-                mail@cps.com
-              </a>
-            </div>
-            <div class="menu-footer__tel tel">
-              <a href="tel:+78008908900" class="menu-footer__link">
-                8 800 890 8900
-              </a>
-            </div>
+              <div class="menu-footer__email email">
+                <a href="mailto:mail@cps.com" class="menu-footer__link">
+                  mail@cps.com
+                </a>
+              </div>
+              <div class="menu-footer__tel tel">
+                <a href="tel:+78008908900" class="menu-footer__link">
+                  8 800 890 8900
+                </a>
+              </div>
 
-            <div class="menu-footer__langs langs">
-              <ul class="langs__list">
-                <li class="langs__item">
+              <div class="menu-footer__langs langs">
+                <ul class="langs__list">
+                  <li class="langs__item">
+                    <input
+                      type="radio"
+                      id="lang__ru"
+                      name="lang"
+                      value="RU"
+                      class="langs__radio"
+                      checked
+                    /><label for="lang__ru" class="langs__label">RU</label>
+                  </li>
+                  <li class="langs__item">
+                    <input
+                      type="radio"
+                      id="lang__en"
+                      name="lang"
+                      value="EN"
+                      class="langs__radio"
+                    /><label for="lang__en" class="langs__label">EN</label>
+                  </li>
+                  <li class="langs__item">
+                    <input
+                      type="radio"
+                      id="lang__ch"
+                      name="lang"
+                      value="CH"
+                      class="langs__radio"
+                    /><label for="lang__ch" class="langs__label">CH</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modals__modal modal modals__modal--feedback">
+          <div class="modal__content">
+            <div class="modal__header">
+              <div class="modal__cross button">
+                <img src="./images/svgs/cross-burger.svg" alt="Крестик" />
+              </div>
+              <div class="modal__heading">
+                <h2 class="modal__beauty-h2 beauty-h2">Обратная связь</h2>
+              </div>
+            </div>
+            <div class="modal__main">
+              <form class="modal__form form" action="#" method="POST">
+                <div class="form__inputs inputs">
+                  <input class="inputs__input" placeholder="Имя" type="text" />
                   <input
-                    type="radio"
-                    id="lang__ru"
-                    name="lang"
-                    value="RU"
-                    class="langs__radio"
-                    checked
-                  /><label for="lang__ru" class="langs__label">RU</label>
-                </li>
-                <li class="langs__item">
+                    class="inputs__input"
+                    placeholder="Телефон"
+                    type="tel"
+                  />
                   <input
-                    type="radio"
-                    id="lang__en"
-                    name="lang"
-                    value="EN"
-                    class="langs__radio"
-                  /><label for="lang__en" class="langs__label">EN</label>
-                </li>
-                <li class="langs__item">
+                    class="inputs__input"
+                    placeholder="Электронная почта"
+                    type="email"
+                  />
+                  <textarea
+                    class="inputs__input inputs__input--textarea"
+                    placeholder="Сообщение"
+                  ></textarea>
+                </div>
+                <div class="form__form-info form-info">
+                  Нажимая “отправить”, вы даете согласие на
+                  <a class="form-info__link" href="#"
+                    >обработку персональных данных</a
+                  >
+                  и соглашаетесь с нашей
+                  <a class="form-info__link" href="#"
+                    >политикой конфиденциальности</a
+                  >
+                </div>
+                <div class="form__button">
+                  <a href="#" class="form__button-link button-link"
+                    >Отправить</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modals__modal modal modals__modal--call">
+          <div class="modal__content">
+            <div class="modal__header">
+              <div class="modal__cross button">
+                <img src="./images/svgs/cross-burger.svg" alt="Крестик" />
+              </div>
+              <div class="modal__heading">
+                <h2 class="modal__beauty-h2 beauty-h2">Заказать звонок</h2>
+              </div>
+            </div>
+            <div class="modal__main">
+              <form class="modal__form form" action="#" method="POST">
+                <div class="form__inputs inputs">
                   <input
-                    type="radio"
-                    id="lang__ch"
-                    name="lang"
-                    value="CH"
-                    class="langs__radio"
-                  /><label for="lang__ch" class="langs__label">CH</label>
-                </li>
-              </ul>
+                    class="inputs__input"
+                    placeholder="Телефон"
+                    type="tel"
+                  />
+                </div>
+                <div class="form__form-info form-info">
+                  Нажимая “отправить”, вы даете согласие на
+                  <a class="form-info__link" href="#"
+                    >обработку персональных данных</a
+                  >
+                  и соглашаетесь с нашей
+                  <a class="form-info__link" href="#"
+                    >политикой конфиденциальности</a
+                  >
+                </div>
+                <div class="form__button">
+                  <a href="#" class="form__button-link button-link"
+                    >Отправить</a
+                  >
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
       <div class="content">
         <header class="header">
-          <div class="header__box big-container">
+          <div class="header__box">
             <div class="header__up">
               <div class="container">
                 <div class="header__content">
@@ -163,7 +257,7 @@
                   <div class="header__menu menu">
                     <ul class="menu__list contacts">
                       <li class="contacts__item">
-                        <button class="contacts__button button">
+                        <button class="contacts__button button button--call">
                           <img
                             class="button__img"
                             src="./images/svgs/call.svg"
@@ -172,7 +266,7 @@
                         </button>
                       </li>
                       <li class="contacts__item">
-                        <button class="contacts__button button">
+                        <button class="contacts__button button button--chat">
                           <img
                             class="button__img"
                             src="./images/svgs/chat.svg"
@@ -181,7 +275,7 @@
                         </button>
                       </li>
                       <li class="contacts__item">
-                        <button class="contacts__button button">
+                        <button class="contacts__button button button--profile">
                           <img
                             class="button__img"
                             src="./images/svgs/profile.svg"
@@ -233,12 +327,15 @@
               <nav class="hero__nav services">
                 <ul class="services__list">
                   <li class="services__item service">
-                    <a class="service__link" href="#repair"
+                    <a class="service__link" href="#brands"
                       >Ремонтируемые бренды</a
                     >
                   </li>
                   <li class="services__item service">
-                    <a class="service__link service__link--active">
+                    <a
+                      class="service__link service__link--active"
+                      href="#devices"
+                    >
                       Ремонтируемые устройства
                     </a>
                   </li>
@@ -300,7 +397,7 @@
               </div>
             </div>
           </section>
-          <section class="brands">
+          <section class="brands" id="brands">
             <div class="brands__section-title section-title">
               <div class="container">
                 <h2 class="section-title__h2 h2">
@@ -507,7 +604,7 @@
               </div>
             </div>
           </section>
-          <section class="devices">
+          <section class="devices" id="devices">
             <div class="devices__section-title section-title">
               <div class="container">
                 <h2 class="section-title__h2 h2">
@@ -638,7 +735,7 @@
               </div>
             </div>
           </section>
-          <section class="prices">
+          <section class="prices" id="prices">
             <div class="prices__section-title section-title">
               <div class="container">
                 <h2 class="section-title__h2 h2">Цены на услуги</h2>
@@ -666,7 +763,9 @@
                             <li class="tr__td td td--price">Бесплатно</li>
                             <li class="tr__td td td--time">30&nbsp;мин</li>
                             <li class="tr__td td td--button">
-                              <a class="td__link" href="#">Заказать</a>
+                              <a class="td__link" href="#">
+                                <span class="td__link--content">Заказать</span>
+                              </a>
                             </li>
                           </ul>
                         </li>
@@ -680,7 +779,9 @@
                             </li>
                             <li class="tr__td td td--time">30-120&nbsp;мин</li>
                             <li class="tr__td td td--button">
-                              <a class="td__link" href="#">Заказать</a>
+                              <a class="td__link" href="#">
+                                <span class="td__link--content">Заказать</span>
+                              </a>
                             </li>
                           </ul>
                         </li>
@@ -694,7 +795,9 @@
                             </li>
                             <li class="tr__td td td--time">30-120&nbsp;мин</li>
                             <li class="tr__td td td--button">
-                              <a class="td__link" href="#">Заказать</a>
+                              <a class="td__link" href="#">
+                                <span class="td__link--content">Заказать</span>
+                              </a>
                             </li>
                           </ul>
                         </li>
@@ -708,7 +811,9 @@
                             </li>
                             <li class="tr__td td td--time">30-120&nbsp;мин</li>
                             <li class="tr__td td td--button">
-                              <a class="td__link" href="#">Заказать</a>
+                              <a class="td__link" href="#">
+                                <span class="td__link--content">Заказать</span>
+                              </a>
                             </li>
                           </ul>
                         </li>
@@ -722,7 +827,9 @@
                             </li>
                             <li class="tr__td td td--time">30-120&nbsp;мин</li>
                             <li class="tr__td td td--button">
-                              <a class="td__link" href="#">Заказать</a>
+                              <a class="td__link" href="#">
+                                <span class="td__link--content">Заказать</span>
+                              </a>
                             </li>
                           </ul>
                         </li>
@@ -754,7 +861,7 @@
                 <p class="footer__year">© 2019 CPS</p>
                 <p class="footer__team">Разработано командой Apesong</p>
               </div>
-              <div class="footer__temrs">Политика конфиденциальности</div>
+              <a href="#" class="footer__temrs">Политика конфиденциальности</a>
               <div class="footer__public">
                 Информация, размещенная на данной странице, не является
                 публичной офертой

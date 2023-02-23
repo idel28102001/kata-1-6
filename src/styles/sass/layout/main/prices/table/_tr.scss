@@ -19,4 +19,7 @@
     gap: 0;
     padding-block: u.rem(16);
   }
+  @include u.breakpoint(large) {
+    padding-block: u.rem(17) u.rem(15.5);
+  }
 }

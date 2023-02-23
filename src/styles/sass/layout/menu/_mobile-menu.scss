@@ -1,28 +1,62 @@
 @use "../../util" as u;
 
 .mobile-menu {
+  @include u.transition(ease-in, 0.1s, transform);
+  background-color: var(--color-white-3);
+  pointer-events: none;
+  $parent: &;
   display: flex;
   position: fixed;
-  width: u.rem(320);
+  width: min(u.rem(320), 100vw);
+  transform: translateX(-100%);
   height: 100vh;
   min-height: 100%;
   top: 0;
   left: 0;
-  transform: translateX(-100%);
-  background-color: var(--color-white-2);
-  box-shadow: u.rem(-2) u.rem(0) u.rem(4) rgba(69, 79, 126, 0.02),
-    u.rem(16) u.rem(0) u.rem(52) rgba(14, 24, 80, 0.2);
   z-index: 2;
-  transition: transform 0.1s ease-in;
+
+  @include u.breakpoint(large) {
+    width: u.rem(309);
+    pointer-events: unset;
+    position: relative;
+    transform: unset;
+    height: unset;
+    transform: unset;
+  }
+  // &::before {
+  //   transition: opacity 0.15s ease-in-out;
+  //   opacity: 0;
+  //   content: "";
+  //   position: fixed;
+  //   height: 100vh;
+  //   width: 200vw;
+  //   pointer-events: none;
+  //   z-index: 1;
+  //   background-color: hsla(0, 0%, 100%, 0.9);
+  // }
 
   &--active {
+    pointer-events: all;
+    // &::before {
+    //   pointer-events: all;
+    //   opacity: 1;
+    // }
+
     transform: unset;
-    transition: transform 0.3s ease-in;
+    box-shadow: u.rem(-2) u.rem(0) u.rem(4) rgba(69, 79, 126, 0.02),
+      u.rem(16) u.rem(0) u.rem(52) rgba(14, 24, 80, 0.2);
+    @include u.breakpoint(large) {
+      box-shadow: unset;
+    }
   }
 
   &__main {
-    flex-grow: 1;
-    margin-bottom: u.rem(30);
+    margin-bottom: u.rem(28);
+
+    @include u.breakpoint(xsmall) {
+      max-height: u.rem(660);
+      flex-grow: 1;
+    }
   }
 
   &__content {
@@ -30,9 +64,20 @@
     flex-direction: column;
     overflow-y: auto;
     font-size: u.rem(32);
-    height: 100vh;
+    max-height: 100vh;
+    height: 100%;
     width: 100%;
-    padding: u.rem(18.7) u.rem(24);
+    z-index: 2;
+    padding: u.rem(14) u.rem(16);
+
+    @include u.breakpoint(xsmall) {
+      padding: u.rem(14) u.rem(24);
+    }
+    @include u.breakpoint(large) {
+      max-height: 112vh;
+      height: unset;
+      padding: u.rem(25) u.rem(28) u.rem(25) u.rem(22);
+    }
   }
 
   &__mobile-header {

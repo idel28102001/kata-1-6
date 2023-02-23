@@ -77,7 +77,7 @@ module.exports = {
         open: true,
         hot: isDev,
     },
-    devtool: isDev ? 'source-map' : 'none',
+    devtool: isDev ? 'source-map' : undefined,
     module: {
         rules: [
             {

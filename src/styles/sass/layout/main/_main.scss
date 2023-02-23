@@ -9,5 +9,8 @@
     @include u.breakpoint(small) {
       margin-bottom: u.rem(47);
     }
+    @include u.breakpoint(large) {
+      margin-bottom: u.rem(50);
+    }
   }
 }

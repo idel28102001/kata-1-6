@@ -1,0 +1,69 @@
+@use "../../util" as u;
+
+.modal {
+  display: flex;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: min(u.rem(320), 100%);
+  background-color: var(--color-white-3);
+  height: 100vh;
+  min-height: 100%;
+  z-index: 3;
+  transform: translateX(150%);
+  @include u.transition(ease-in, 0.15s, transform);
+
+  @include u.breakpoint(large) {
+    width: u.rem(440);
+  }
+
+  &__content {
+    padding: u.rem(24) u.rem(16);
+
+    @include u.breakpoint(large) {
+      padding: u.rem(40) u.rem(32);
+    }
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(41);
+    margin-bottom: u.rem(24);
+
+    @include u.breakpoint(small) {
+      flex-direction: row;
+    }
+  }
+
+  &__cross {
+    @include u.breakpoint(small) {
+      position: absolute;
+      top: 0;
+      left: u.rem(-16 - 32);
+      transform: translateX(-100%);
+    }
+    @include u.breakpoint(large) {
+      top: u.rem(-8);
+      left: u.rem(-33 - 32);
+    }
+    > img {
+      display: flex;
+      height: u.rem(40);
+      width: u.rem(40);
+    }
+  }
+  &__beauty-h2 {
+    &::before {
+      left: u.rem(-16);
+      @include u.breakpoint(large) {
+        left: u.rem(-32);
+      }
+    }
+  }
+
+  &__main {
+    overflow-y: auto;
+  }
+}

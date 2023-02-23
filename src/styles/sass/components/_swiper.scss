@@ -54,7 +54,7 @@
       max-height: u.rem(160);
     }
 
-    @include u.breakpoint(large) {
+    @include u.breakpoint(xlarge) {
       grid-template-columns: repeat(4, 1fr);
       column-gap: u.rem(32);
     }

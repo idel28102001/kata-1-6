@@ -6,6 +6,11 @@
   @include u.breakpoint(small) {
     margin-bottom: u.rem(30);
   }
+
+  @include u.breakpoint(large) {
+    margin-bottom: u.rem(53);
+  }
+
   &__nav {
     margin-bottom: u.rem(18);
     position: relative;
@@ -17,7 +22,8 @@
     }
 
     @include u.breakpoint(large) {
-      margin-bottom: u.rem(4);
+      margin-bottom: u.rem(8);
+      margin-inline: 0;
     }
 
     &::after {

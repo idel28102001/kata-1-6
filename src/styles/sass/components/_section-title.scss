@@ -1,7 +1,5 @@
 @use "../util" as u;
 .section-title {
-  border-top: u.rem(1) solid var(--color-aquamarine-3);
-  background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
   padding-block: u.rem(16);
 
   &__h2 {

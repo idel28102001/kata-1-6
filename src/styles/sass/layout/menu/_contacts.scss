@@ -13,12 +13,16 @@
 .email {
   font-size: u.rem(16);
   line-height: u.rem(24);
-  margin-bottom: u.rem(12);
+  margin-bottom: u.rem(17);
 }
 
 .tel {
   font-size: u.rem(24);
   font-weight: bold;
   line-height: u.rem(22);
-  margin-bottom: u.rem(40);
+  margin-bottom: u.rem(2);
+
+  @include u.breakpoint(xsmall) {
+    margin-bottom: u.rem(34);
+  }
 }

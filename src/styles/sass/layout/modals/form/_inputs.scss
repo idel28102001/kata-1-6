@@ -1,0 +1,25 @@
+@use "../../../util" as u;
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem(16);
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: 500;
+    font-size: u.rem(16);
+    line-height: u.rem(16);
+    padding: u.rem(12) u.rem(16);
+    border-radius: u.rem(10);
+    border: u.rem(1) solid var(--color-white-1);
+    &::placeholder {
+      color: var(--color-gray-4);
+    }
+
+    &--textarea {
+      min-height: u.rem(118);
+    }
+  }
+}

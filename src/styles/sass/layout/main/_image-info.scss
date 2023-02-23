@@ -17,5 +17,8 @@
     @include u.breakpoint(small) {
       max-height: u.rem(212);
     }
+    @include u.breakpoint(large) {
+      max-height: u.rem(307);
+    }
   }
 }

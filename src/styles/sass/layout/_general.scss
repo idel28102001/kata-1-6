@@ -1,10 +1,7 @@
 @use "../util" as u;
 
-.big-container {
-  @include u.breakpoint(large) {
-    max-width: u.rem(1120);
-    margin-inline: auto;
-  }
+html {
+  // background-color: var(--color-gray-3);
 }
 .container {
   padding-inline: u.rem(16);
@@ -15,14 +12,17 @@
   }
 
   @include u.breakpoint(large) {
-    max-width: u.rem(1120);
-    padding-inline: u.rem(32);
+    max-width: unset;
+    padding-inline: u.rem(34);
   }
 }
 
 .body {
   display: flex;
   width: 100%;
+  max-width: u.rem(1426);
+  margin-inline: auto;
+  background-color: var(--color-white-2);
 }
 
 .content {

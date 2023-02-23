@@ -12,6 +12,10 @@
     transition: border-color 0.1s ease-in-out;
     border: u.rem(2) solid transparent;
 
+    @include u.breakpoint(large) {
+      padding: u.rem(11) u.rem(20);
+    }
+
     &--active,
     &:hover {
       border-color: var(--color-aquamarine-2);

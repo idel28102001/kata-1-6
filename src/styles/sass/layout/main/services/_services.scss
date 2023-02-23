@@ -13,6 +13,7 @@
     @include u.breakpoint(large) {
       flex-wrap: wrap;
       overflow-x: unset;
+      margin-right: 0;
     }
 
     &::-webkit-scrollbar {
@@ -22,5 +23,8 @@
 
   &__item {
     margin: u.rem(5);
+    @include u.breakpoint(large) {
+      margin: 0;
+    }
   }
 }

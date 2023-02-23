@@ -62,6 +62,9 @@ button {
   @include u.breakpoint(xsmall) {
     padding: u.rem(2) 0 0 u.rem(1);
   }
+  @include u.breakpoint(large) {
+    gap: 0;
+  }
 
   &::before {
     content: "";
@@ -108,5 +111,26 @@ button {
 
   &:active {
     transform: unset;
+  }
+}
+
+.button-link {
+  display: flex;
+  flex-shrink: 1;
+  align-items: center;
+  background-color: var(--color-pink-1);
+  border-radius: u.rem(16);
+  font-size: u.rem(12);
+  padding: u.rem(9) u.rem(18);
+  color: var(--color-white-3);
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &::after {
+    margin-left: u.rem(12);
+    content: "";
+    background-image: url("../images/svgs/mini-arrow.svg");
+    width: u.rem(8);
+    height: u.rem(10);
   }
 }

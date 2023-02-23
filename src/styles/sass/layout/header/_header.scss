@@ -7,21 +7,25 @@
   }
   @include u.breakpoint(large) {
     padding-top: u.rem(42);
-    margin-bottom: u.rem(4);
+    margin-bottom: u.rem(7.5);
   }
 
   &__up {
     box-shadow: 0 u.rem(-12) u.rem(20) 0 var(--color-aquamarine-1);
     padding: u.rem(17.5) 0;
     margin-bottom: u.rem(25);
-    // @include u.breakpoint(small) {
-    //   padding: u.rem(15.5) 0;
-    // }
 
     @include u.breakpoint(large) {
       box-shadow: unset;
       padding: 0;
       margin-bottom: 0;
+      margin-right: u.rem(31);
+    }
+
+    > .container {
+      @include u.breakpoint(large) {
+        padding: 0;
+      }
     }
   }
 

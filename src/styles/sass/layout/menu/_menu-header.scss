@@ -4,8 +4,23 @@
   display: flex;
   align-items: center;
   gap: u.rem(16.7);
-  margin-bottom: u.rem(16);
+  padding-top: u.rem(4.5);
+  margin-bottom: u.rem(22);
+
+  @include u.breakpoint(xsmall) {
+    margin-bottom: u.rem(46);
+  }
+  @include u.breakpoint(large) {
+    margin-bottom: u.rem(32);
+  }
+
   &__button {
+    &:first-child {
+      @include u.breakpoint(large) {
+        display: none;
+      }
+    }
+
     &:last-child {
       flex-grow: 1;
       justify-content: flex-end;

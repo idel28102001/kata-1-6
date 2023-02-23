@@ -14,3 +14,9 @@
   font-weight: 500;
   margin-bottom: u.rem(6);
 }
+
+@mixin transition($timing, $duration, $properties...) {
+  transition-property: $properties;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+}

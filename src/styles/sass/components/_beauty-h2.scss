@@ -1,0 +1,20 @@
+@use "../util" as u;
+
+.beauty-h2 {
+  position: relative;
+  font-size: u.rem(24);
+  line-height: u.rem(32);
+
+  &::before {
+    position: absolute;
+    display: block;
+    border-radius: u.rem(4);
+    background-color: var(--color-aquamarine-1);
+    content: "";
+    height: 100%;
+    width: u.rem(6);
+    left: 0;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}

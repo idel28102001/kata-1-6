@@ -62,7 +62,7 @@
 
     @include u.breakpoint(large) {
       flex-grow: unset;
-      flex-basis: u.rem(490);
+      flex-basis: 46%;
     }
   }
 
