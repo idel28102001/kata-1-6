@@ -5,6 +5,10 @@
   @include u.breakpoint(small) {
     padding-block: u.rem(32) u.rem(24);
   }
+  &__content,
+  &__content > * {
+    color: var(--color-gray-1);
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -12,7 +16,6 @@
     font-size: u.rem(14);
     align-items: center;
     text-align: center;
-    color: var(--color-gray-1);
 
     @include u.breakpoint(small) {
       align-items: flex-start;

@@ -11,6 +11,11 @@
     margin-bottom: u.rem(53);
   }
 
+  &__heading {
+    position: absolute;
+    opacity: 0;
+  }
+
   &__nav {
     margin-bottom: u.rem(18);
     position: relative;

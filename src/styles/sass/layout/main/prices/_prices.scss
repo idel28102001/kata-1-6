@@ -47,10 +47,15 @@
     &::after {
       transition: transform 0.1s ease-in-out;
       content: "";
-      position: absolute;
+      position: relative;
+      margin-left: u.rem(5);
+      display: inline-flex;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
       background-image: url("../images/svgs/more.svg");
-      height: u.rem(24);
-      width: u.rem(27.49);
+      height: u.rem(10);
+      width: u.rem(10);
     }
     &:hover:after {
       transform: translateX(u.rem(4));

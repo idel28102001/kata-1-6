@@ -11,8 +11,10 @@ const func = () => {
         button.style.display = 'flex';
     }
 }
-button.addEventListener('click', () => {
+const timer = (n) => new Promise(res => setTimeout(res, n));
+button.addEventListener('click', async () => {
     description.classList.toggle(classText);
+    await timer(500);
     func();
 });
 func()
