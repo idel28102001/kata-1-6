@@ -1,47 +1,18 @@
 @use "../../util" as u;
 
 .mobile-menu {
-  @include u.transition(ease-in, 0.1s, transform);
-  background-color: var(--color-white-3);
-  pointer-events: none;
   $parent: &;
-  display: flex;
-  position: fixed;
-  width: min(u.rem(320), 100vw);
-  transform: translateX(-100%);
-  height: 100vh;
-  min-height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2;
+  // transform: translateX(-100%);
+  // left: 0;
 
-  @include u.breakpoint(large) {
-    width: u.rem(309);
-    pointer-events: unset;
-    position: relative;
-    transform: unset;
-    height: unset;
-    transform: unset;
-  }
-  // &::before {
-  //   transition: opacity 0.15s ease-in-out;
-  //   opacity: 0;
-  //   content: "";
-  //   position: fixed;
-  //   height: 100vh;
-  //   width: 200vw;
-  //   pointer-events: none;
-  //   z-index: 1;
-  //   background-color: hsla(0, 0%, 100%, 0.9);
+  // @include u.breakpoint(large) {
+  //   width: u.rem(309);
+  //   position: relative;
+  //   transform: unset;
   // }
 
   &--active {
     pointer-events: all;
-    // &::before {
-    //   pointer-events: all;
-    //   opacity: 1;
-    // }
-
     transform: unset;
     box-shadow: u.rem(-2) u.rem(0) u.rem(4) rgba(69, 79, 126, 0.02),
       u.rem(16) u.rem(0) u.rem(52) rgba(14, 24, 80, 0.2);

@@ -2,20 +2,11 @@
 
 .modal {
   display: flex;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: min(u.rem(320), 100%);
   background-color: var(--color-white-3);
   height: 100vh;
   min-height: 100%;
   z-index: 3;
-  transform: translateX(150%);
   @include u.transition(ease-in, 0.15s, transform);
-
-  @include u.breakpoint(large) {
-    width: u.rem(440);
-  }
 
   &__content {
     padding: u.rem(24) u.rem(16);
