@@ -103,12 +103,14 @@
     }
   }
 
-  &__burger {
-    @include u.breakpoint(xsmall) {
-      margin-right: u.rem(24);
-    }
-    @include u.breakpoint(large) {
-      display: none;
+  &__button {
+    &--burger {
+      @include u.breakpoint(xsmall) {
+        margin-right: u.rem(24);
+      }
+      @include u.breakpoint(large) {
+        display: none;
+      }
     }
   }
 

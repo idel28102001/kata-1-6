@@ -1,0 +1,8 @@
+@use "../util" as u;
+
+.logo {
+  &__img {
+    height: u.rem(50.8);
+    width: u.rem(96.5);
+  }
+}

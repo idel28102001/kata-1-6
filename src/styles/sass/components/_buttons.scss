@@ -10,7 +10,7 @@ button {
   > #{$button} {
     transform: translateX(u.rem($translate));
   }
-  > img {
+  > svg {
     transform: scale($scale);
     opacity: $opacity;
   }
@@ -29,12 +29,12 @@ button {
     }
   }
 
-  > img {
+  > svg {
     height: u.rem(40);
     width: u.rem(40);
   }
 
-  > img,
+  > svg,
   > &__label {
     transition-property: transform, opacity;
     transition-duration: 0.15s;
@@ -100,7 +100,6 @@ button {
 .arrow-button {
   & {
     transition: transform 0.1s ease-in-out;
-    content: url("../images/svgs/round-arrow.svg");
     width: u.rem(40);
     height: u.rem(40);
   }
