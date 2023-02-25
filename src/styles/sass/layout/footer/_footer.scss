@@ -31,13 +31,21 @@
       text-align: left;
     }
   }
-  &__temrs {
+  &__link {
     @include u.breakpoint(small) {
-      color: var(--color-gray-1);
       text-align: center;
     }
     @include u.breakpoint(large) {
       text-align: left;
+    }
+    border-bottom: 1px solid currentColor;
+    color: var(--color-gray-1);
+    transition: padding-bottom 0.1s ease-in-out;
+    &:hover {
+      padding-bottom: u.rem(2);
+    }
+    &:active {
+      padding-bottom: 0;
     }
   }
   &__public {
