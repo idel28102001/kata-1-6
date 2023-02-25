@@ -1,7 +1,9 @@
 @use "functions" as u;
 @use "breakpoints" as b;
 
-@mixin heightWidth($height, $width) {
+@mixin logosImg($height, $width) {
+  background-image: url("../images/sprite.png");
+  background-size: u.rem(800);
   height: u.rem($height);
   width: u.rem($width);
 }

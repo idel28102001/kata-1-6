@@ -3,35 +3,43 @@
 .icon {
   &__svg {
     &-lenovo {
-      @include u.heightWidth(32, 108);
+      background-position-x: u.rem(502);
+      @include u.logosImg(32, 108);
     }
 
     &-samsung {
-      @include u.heightWidth(39, 116);
+      background-position-x: u.rem(671);
+      @include u.logosImg(39, 116);
     }
 
     &-apple {
-      @include u.heightWidth(44, 44);
+      background-position-x: u.rem(395);
+      @include u.logosImg(44, 44);
     }
 
     &-view-sonic {
-      @include u.heightWidth(21, 128);
+      background-position-x: u.rem(256);
+      @include u.logosImg(21, 128);
     }
 
     &-bosch {
-      @include u.heightWidth(30, 128);
+      background-position-x: 0;
+      @include u.logosImg(30, 128);
     }
 
     &-hp {
-      @include u.heightWidth(52, 52);
+      background-position-x: u.rem(554);
+      @include u.logosImg(52, 52);
     }
 
     &-acer {
-      @include u.heightWidth(24, 94);
+      background-position-x: u.rem(351);
+      @include u.logosImg(24, 94);
     }
 
     &-sony {
-      @include u.heightWidth(26, 124);
+      background-position-x: u.rem(927);
+      @include u.logosImg(26, 124);
     }
   }
 }
