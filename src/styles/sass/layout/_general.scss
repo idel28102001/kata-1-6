@@ -1,8 +1,5 @@
 @use "../util" as u;
 
-html {
-  // background-color: var(--color-gray-3);
-}
 .container {
   padding-inline: u.rem(16);
   margin-inline: auto;
@@ -26,5 +23,12 @@ html {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  min-height: 100vh;
+
+  > .main {
+    flex-grow: 1;
+  }
 }

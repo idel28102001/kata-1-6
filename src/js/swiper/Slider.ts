@@ -33,10 +33,12 @@ export default class Slider {
 
     private readMoreInit() {
         const readMore = this.section.querySelector('.button-read-more');
-        const bar = this.section.querySelector('.swiper');
-        readMore.addEventListener('click', () => {
-            bar.classList.toggle('swiper--exposed');
-        });
+        if (readMore) {
+            const bar = this.section.querySelector('.swiper');
+            readMore.addEventListener('click', () => {
+                bar.classList.toggle('swiper--exposed');
+            });
+        }
     }
 
     private swiperCard() {
@@ -78,11 +80,13 @@ export default class Slider {
     private checkExposeButton = (max: number) => {
         const wrapper = this.section.querySelector('.swiper-wrapper');
         const readMore = this.section.querySelector('.button-read-more') as HTMLElement;
-        const length = wrapper.children.length;
-        if (length <= max || max === 0 || this.options.buttonUnavailable) {
-            readMore.style.display = "none";
-        } else {
-            readMore.style.display = "flex";
+        if (readMore) {
+            const length = wrapper.children.length;
+            if (length <= max || max === 0 || this.options.buttonUnavailable) {
+                readMore.style.display = "none";
+            } else {
+                readMore.style.display = "flex";
+            }
         }
     }
 

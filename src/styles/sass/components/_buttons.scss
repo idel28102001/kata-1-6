@@ -1,6 +1,7 @@
 @use "../util" as u;
 
-button {
+button,
+[type="submit"] {
   background-color: transparent;
   border: none;
   cursor: pointer;

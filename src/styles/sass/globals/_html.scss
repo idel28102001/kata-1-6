@@ -1,0 +1,10 @@
+$modal-name: modals;
+$modal-names: mobile-menu call feedback;
+
+html {
+  @each $mod in $modal-names {
+    :has(.#{$modal-name}--#{$mod}) {
+      overflow-y: clip;
+    }
+  }
+}
